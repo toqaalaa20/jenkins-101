@@ -8,6 +8,14 @@ pipeline {
         pollSCM '* * * * *'
     }
     stages {
+    	stage('Install Dependencies') {
+            steps {
+                sh '''
+                    sudo apt-get update
+                    sudo apt-get install -y python3.11-venv
+                '''
+            }
+        }
         stage('Build') {
             steps {
                 echo "Building.."
