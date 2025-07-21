@@ -24,8 +24,8 @@ pipeline {
                 echo "Testing.."
                 sh '''
                 cd myapp
-                ../venv/bin/python3 hello.py
-                ../venv/bin/python3 hello.py --name=Brad
+                venv/bin/python3 hello.py
+                venv/bin/python3 hello.py --name=Brad
                 '''
             }
         }
